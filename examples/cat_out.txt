@@ -1,0 +1,48 @@
+[
+    {
+        "opcode": "ld",
+        "arg": [
+            0,
+            "1"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            1,
+            "0"
+        ]
+    },
+    {
+        "opcode": "loop",
+        "arg": [
+            2
+        ]
+    },
+    {
+        "opcode": "more",
+        "arg": [
+            0,
+            1
+        ]
+    },
+    {
+        "opcode": "read",
+        "arg": [
+            0
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            0
+        ]
+    },
+    {
+        "opcode": "jne",
+        "arg": null
+    },
+    {
+        "opcode": "halt"
+    }
+]

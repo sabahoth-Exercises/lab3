@@ -1,0 +1,268 @@
+source: |-
+  let fib1 = 1;
+  let fib2 = 2;
+  let sum = 0;
+  let fib3 = 0;
+  let max = 4000000;
+  while (fib2 < max) {
+      sum = sum + fib2;
+      fib3 = fib1 + fib2;
+      fib1 = fib2 + fib3;
+      fib2 = fib1 + fib3;
+  }
+  print(sum);
+
+input: |-
+
+output: |
+  source LoC: 47 code instr: 18
+  ============================================================
+  4613732
+  instr_counter:  127 ticks: 493
+log: |
+ DEBUG    root:machine.py:295 {TICK: 0, PC: 0, ADDR: 0, OUT: 0, AC: 0, DR: 0} ld [0, '1']
+ DEBUG    root:machine.py:301 {TICK: 4, PC: 1, ADDR: 0, OUT: 1, AC: 1, DR: 1} ld [1, '2']
+ DEBUG    root:machine.py:301 {TICK: 8, PC: 2, ADDR: 1, OUT: 2, AC: 2, DR: 2} ld [2, '0']
+ DEBUG    root:machine.py:301 {TICK: 12, PC: 3, ADDR: 2, OUT: 0, AC: 0, DR: 0} ld [3, '0']
+ DEBUG    root:machine.py:301 {TICK: 16, PC: 4, ADDR: 3, OUT: 0, AC: 0, DR: 0} ld [4, '4000000']
+ DEBUG    root:machine.py:301 {TICK: 20, PC: 5, ADDR: 4, OUT: 4000000, AC: 4000000, DR: 4000000} loop [5]
+ DEBUG    root:machine.py:301 {TICK: 22, PC: 6, ADDR: 4, OUT: 4000000, AC: 4000000, DR: 4000000} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 27, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 2} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 32, PC: 8, ADDR: 2, OUT: 0, AC: 2, DR: 2} save [2]
+ DEBUG    root:machine.py:301 {TICK: 35, PC: 9, ADDR: 2, OUT: 2, AC: 2, DR: 2} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 40, PC: 10, ADDR: 0, OUT: 1, AC: 3, DR: 2} save [3]
+ DEBUG    root:machine.py:301 {TICK: 43, PC: 11, ADDR: 3, OUT: 3, AC: 3, DR: 2} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 48, PC: 12, ADDR: 1, OUT: 2, AC: 5, DR: 3} save [0]
+ DEBUG    root:machine.py:301 {TICK: 51, PC: 13, ADDR: 0, OUT: 5, AC: 5, DR: 3} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 56, PC: 14, ADDR: 0, OUT: 5, AC: 8, DR: 3} save [1]
+ DEBUG    root:machine.py:301 {TICK: 59, PC: 15, ADDR: 1, OUT: 8, AC: 8, DR: 3} jne None
+ DEBUG    root:machine.py:301 {TICK: 61, PC: 6, ADDR: 1, OUT: 8, AC: 8, DR: 3} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 66, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 8} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 71, PC: 8, ADDR: 2, OUT: 2, AC: 10, DR: 8} save [2]
+ DEBUG    root:machine.py:301 {TICK: 74, PC: 9, ADDR: 2, OUT: 10, AC: 10, DR: 8} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 79, PC: 10, ADDR: 0, OUT: 5, AC: 13, DR: 8} save [3]
+ DEBUG    root:machine.py:301 {TICK: 82, PC: 11, ADDR: 3, OUT: 13, AC: 13, DR: 8} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 87, PC: 12, ADDR: 1, OUT: 8, AC: 21, DR: 13} save [0]
+ DEBUG    root:machine.py:301 {TICK: 90, PC: 13, ADDR: 0, OUT: 21, AC: 21, DR: 13} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 95, PC: 14, ADDR: 0, OUT: 21, AC: 34, DR: 13} save [1]
+ DEBUG    root:machine.py:301 {TICK: 98, PC: 15, ADDR: 1, OUT: 34, AC: 34, DR: 13} jne None
+ DEBUG    root:machine.py:301 {TICK: 100, PC: 6, ADDR: 1, OUT: 34, AC: 34, DR: 13} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 105, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 34} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 110, PC: 8, ADDR: 2, OUT: 10, AC: 44, DR: 34} save [2]
+ DEBUG    root:machine.py:301 {TICK: 113, PC: 9, ADDR: 2, OUT: 44, AC: 44, DR: 34} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 118, PC: 10, ADDR: 0, OUT: 21, AC: 55, DR: 34} save [3]
+ DEBUG    root:machine.py:301 {TICK: 121, PC: 11, ADDR: 3, OUT: 55, AC: 55, DR: 34} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 126, PC: 12, ADDR: 1, OUT: 34, AC: 89, DR: 55} save [0]
+ DEBUG    root:machine.py:301 {TICK: 129, PC: 13, ADDR: 0, OUT: 89, AC: 89, DR: 55} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 134, PC: 14, ADDR: 0, OUT: 89, AC: 144, DR: 55} save [1]
+ DEBUG    root:machine.py:301 {TICK: 137, PC: 15, ADDR: 1, OUT: 144, AC: 144, DR: 55} jne None
+ DEBUG    root:machine.py:301 {TICK: 139, PC: 6, ADDR: 1, OUT: 144, AC: 144, DR: 55} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 144, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 144} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 149, PC: 8, ADDR: 2, OUT: 44, AC: 188, DR: 144} save [2]
+ DEBUG    root:machine.py:301 {TICK: 152, PC: 9, ADDR: 2, OUT: 188, AC: 188, DR: 144} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 157, PC: 10, ADDR: 0, OUT: 89, AC: 233, DR: 144} save [3]
+ DEBUG    root:machine.py:301 {TICK: 160, PC: 11, ADDR: 3, OUT: 233, AC: 233, DR: 144} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 165, PC: 12, ADDR: 1, OUT: 144, AC: 377, DR: 233} save [0]
+ DEBUG    root:machine.py:301 {TICK: 168, PC: 13, ADDR: 0, OUT: 377, AC: 377, DR: 233} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 173, PC: 14, ADDR: 0, OUT: 377, AC: 610, DR: 233} save [1]
+ DEBUG    root:machine.py:301 {TICK: 176, PC: 15, ADDR: 1, OUT: 610, AC: 610, DR: 233} jne None
+ DEBUG    root:machine.py:301 {TICK: 178, PC: 6, ADDR: 1, OUT: 610, AC: 610, DR: 233} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 183, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 610} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 188, PC: 8, ADDR: 2, OUT: 188, AC: 798, DR: 610} save [2]
+ DEBUG    root:machine.py:301 {TICK: 191, PC: 9, ADDR: 2, OUT: 798, AC: 798, DR: 610} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 196, PC: 10, ADDR: 0, OUT: 377, AC: 987, DR: 610} save [3]
+ DEBUG    root:machine.py:301 {TICK: 199, PC: 11, ADDR: 3, OUT: 987, AC: 987, DR: 610} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 204, PC: 12, ADDR: 1, OUT: 610, AC: 1597, DR: 987} save [0]
+ DEBUG    root:machine.py:301 {TICK: 207, PC: 13, ADDR: 0, OUT: 1597, AC: 1597, DR: 987} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 212, PC: 14, ADDR: 0, OUT: 1597, AC: 2584, DR: 987} save [1]
+ DEBUG    root:machine.py:301 {TICK: 215, PC: 15, ADDR: 1, OUT: 2584, AC: 2584, DR: 987} jne None
+ DEBUG    root:machine.py:301 {TICK: 217, PC: 6, ADDR: 1, OUT: 2584, AC: 2584, DR: 987} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 222, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 2584} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 227, PC: 8, ADDR: 2, OUT: 798, AC: 3382, DR: 2584} save [2]
+ DEBUG    root:machine.py:301 {TICK: 230, PC: 9, ADDR: 2, OUT: 3382, AC: 3382, DR: 2584} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 235, PC: 10, ADDR: 0, OUT: 1597, AC: 4181, DR: 2584} save [3]
+ DEBUG    root:machine.py:301 {TICK: 238, PC: 11, ADDR: 3, OUT: 4181, AC: 4181, DR: 2584} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 243, PC: 12, ADDR: 1, OUT: 2584, AC: 6765, DR: 4181} save [0]
+ DEBUG    root:machine.py:301 {TICK: 246, PC: 13, ADDR: 0, OUT: 6765, AC: 6765, DR: 4181} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 251, PC: 14, ADDR: 0, OUT: 6765, AC: 10946, DR: 4181} save [1]
+ DEBUG    root:machine.py:301 {TICK: 254, PC: 15, ADDR: 1, OUT: 10946, AC: 10946, DR: 4181} jne None
+ DEBUG    root:machine.py:301 {TICK: 256, PC: 6, ADDR: 1, OUT: 10946, AC: 10946, DR: 4181} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 261, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 10946} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 266, PC: 8, ADDR: 2, OUT: 3382, AC: 14328, DR: 10946} save [2]
+ DEBUG    root:machine.py:301 {TICK: 269, PC: 9, ADDR: 2, OUT: 14328, AC: 14328, DR: 10946} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 274, PC: 10, ADDR: 0, OUT: 6765, AC: 17711, DR: 10946} save [3]
+ DEBUG    root:machine.py:301 {TICK: 277, PC: 11, ADDR: 3, OUT: 17711, AC: 17711, DR: 10946} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 282, PC: 12, ADDR: 1, OUT: 10946, AC: 28657, DR: 17711} save [0]
+ DEBUG    root:machine.py:301 {TICK: 285, PC: 13, ADDR: 0, OUT: 28657, AC: 28657, DR: 17711} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 290, PC: 14, ADDR: 0, OUT: 28657, AC: 46368, DR: 17711} save [1]
+ DEBUG    root:machine.py:301 {TICK: 293, PC: 15, ADDR: 1, OUT: 46368, AC: 46368, DR: 17711} jne None
+ DEBUG    root:machine.py:301 {TICK: 295, PC: 6, ADDR: 1, OUT: 46368, AC: 46368, DR: 17711} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 300, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 46368} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 305, PC: 8, ADDR: 2, OUT: 14328, AC: 60696, DR: 46368} save [2]
+ DEBUG    root:machine.py:301 {TICK: 308, PC: 9, ADDR: 2, OUT: 60696, AC: 60696, DR: 46368} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 313, PC: 10, ADDR: 0, OUT: 28657, AC: 75025, DR: 46368} save [3]
+ DEBUG    root:machine.py:301 {TICK: 316, PC: 11, ADDR: 3, OUT: 75025, AC: 75025, DR: 46368} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 321, PC: 12, ADDR: 1, OUT: 46368, AC: 121393, DR: 75025} save [0]
+ DEBUG    root:machine.py:301 {TICK: 324, PC: 13, ADDR: 0, OUT: 121393, AC: 121393, DR: 75025} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 329, PC: 14, ADDR: 0, OUT: 121393, AC: 196418, DR: 75025} save [1]
+ DEBUG    root:machine.py:301 {TICK: 332, PC: 15, ADDR: 1, OUT: 196418, AC: 196418, DR: 75025} jne None
+ DEBUG    root:machine.py:301 {TICK: 334, PC: 6, ADDR: 1, OUT: 196418, AC: 196418, DR: 75025} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 339, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 196418} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 344, PC: 8, ADDR: 2, OUT: 60696, AC: 257114, DR: 196418} save [2]
+ DEBUG    root:machine.py:301 {TICK: 347, PC: 9, ADDR: 2, OUT: 257114, AC: 257114, DR: 196418} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 352, PC: 10, ADDR: 0, OUT: 121393, AC: 317811, DR: 196418} save [3]
+ DEBUG    root:machine.py:301 {TICK: 355, PC: 11, ADDR: 3, OUT: 317811, AC: 317811, DR: 196418} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 360, PC: 12, ADDR: 1, OUT: 196418, AC: 514229, DR: 317811} save [0]
+ DEBUG    root:machine.py:301 {TICK: 363, PC: 13, ADDR: 0, OUT: 514229, AC: 514229, DR: 317811} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 368, PC: 14, ADDR: 0, OUT: 514229, AC: 832040, DR: 317811} save [1]
+ DEBUG    root:machine.py:301 {TICK: 371, PC: 15, ADDR: 1, OUT: 832040, AC: 832040, DR: 317811} jne None
+ DEBUG    root:machine.py:301 {TICK: 373, PC: 6, ADDR: 1, OUT: 832040, AC: 832040, DR: 317811} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 378, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 832040} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 383, PC: 8, ADDR: 2, OUT: 257114, AC: 1089154, DR: 832040} save [2]
+ DEBUG    root:machine.py:301 {TICK: 386, PC: 9, ADDR: 2, OUT: 1089154, AC: 1089154, DR: 832040} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 391, PC: 10, ADDR: 0, OUT: 514229, AC: 1346269, DR: 832040} save [3]
+ DEBUG    root:machine.py:301 {TICK: 394, PC: 11, ADDR: 3, OUT: 1346269, AC: 1346269, DR: 832040} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 399, PC: 12, ADDR: 1, OUT: 832040, AC: 2178309, DR: 1346269} save [0]
+ DEBUG    root:machine.py:301 {TICK: 402, PC: 13, ADDR: 0, OUT: 2178309, AC: 2178309, DR: 1346269} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 407, PC: 14, ADDR: 0, OUT: 2178309, AC: 3524578, DR: 1346269} save [1]
+ DEBUG    root:machine.py:301 {TICK: 410, PC: 15, ADDR: 1, OUT: 3524578, AC: 3524578, DR: 1346269} jne None
+ DEBUG    root:machine.py:301 {TICK: 412, PC: 6, ADDR: 1, OUT: 3524578, AC: 3524578, DR: 1346269} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 417, PC: 7, ADDR: 4, OUT: 4000000, AC: True, DR: 3524578} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 422, PC: 8, ADDR: 2, OUT: 1089154, AC: 4613732, DR: 3524578} save [2]
+ DEBUG    root:machine.py:301 {TICK: 425, PC: 9, ADDR: 2, OUT: 4613732, AC: 4613732, DR: 3524578} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 430, PC: 10, ADDR: 0, OUT: 2178309, AC: 5702887, DR: 3524578} save [3]
+ DEBUG    root:machine.py:301 {TICK: 433, PC: 11, ADDR: 3, OUT: 5702887, AC: 5702887, DR: 3524578} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 438, PC: 12, ADDR: 1, OUT: 3524578, AC: 9227465, DR: 5702887} save [0]
+ DEBUG    root:machine.py:301 {TICK: 441, PC: 13, ADDR: 0, OUT: 9227465, AC: 9227465, DR: 5702887} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 446, PC: 14, ADDR: 0, OUT: 9227465, AC: 14930352, DR: 5702887} save [1]
+ DEBUG    root:machine.py:301 {TICK: 449, PC: 15, ADDR: 1, OUT: 14930352, AC: 14930352, DR: 5702887} jne None
+ DEBUG    root:machine.py:301 {TICK: 451, PC: 6, ADDR: 1, OUT: 14930352, AC: 14930352, DR: 5702887} less [1, 4]
+ DEBUG    root:machine.py:301 {TICK: 456, PC: 7, ADDR: 4, OUT: 4000000, AC: False, DR: 14930352} add [1, 2]
+ DEBUG    root:machine.py:301 {TICK: 461, PC: 8, ADDR: 2, OUT: 4613732, AC: 19544084, DR: 14930352} save [2]
+ DEBUG    root:machine.py:301 {TICK: 464, PC: 9, ADDR: 2, OUT: 19544084, AC: 19544084, DR: 14930352} add [1, 0]
+ DEBUG    root:machine.py:301 {TICK: 469, PC: 10, ADDR: 0, OUT: 9227465, AC: 24157817, DR: 14930352} save [3]
+ DEBUG    root:machine.py:301 {TICK: 472, PC: 11, ADDR: 3, OUT: 24157817, AC: 24157817, DR: 14930352} add [3, 1]
+ DEBUG    root:machine.py:301 {TICK: 477, PC: 12, ADDR: 1, OUT: 14930352, AC: 39088169, DR: 24157817} save [0]
+ DEBUG    root:machine.py:301 {TICK: 480, PC: 13, ADDR: 0, OUT: 39088169, AC: 39088169, DR: 24157817} add [3, 0]
+ DEBUG    root:machine.py:301 {TICK: 485, PC: 14, ADDR: 0, OUT: 39088169, AC: 63245986, DR: 24157817} save [1]
+ DEBUG    root:machine.py:301 {TICK: 488, PC: 15, ADDR: 1, OUT: 63245986, AC: 63245986, DR: 24157817} jne None
+ DEBUG    root:machine.py:301 {TICK: 490, PC: 16, ADDR: 1, OUT: 63245986, AC: 63245986, DR: 24157817} print [2]
+ DEBUG    root:machine.py:81 output: '4613732'
+ DEBUG    root:machine.py:301 {TICK: 493, PC: 17, ADDR: 2, OUT: 19544084, AC: 63245986, DR: 24157817} halt 
+ INFO     root:machine.py:310 output_buffer: 4613732
+code: |-
+  [
+      {
+          "opcode": "ld",
+          "arg": [
+              0,
+              "1"
+          ]
+      },
+      {
+          "opcode": "ld",
+          "arg": [
+              1,
+              "2"
+          ]
+      },
+      {
+          "opcode": "ld",
+          "arg": [
+              2,
+              "0"
+          ]
+      },
+      {
+          "opcode": "ld",
+          "arg": [
+              3,
+              "0"
+          ]
+      },
+      {
+          "opcode": "ld",
+          "arg": [
+              4,
+              "4000000"
+          ]
+      },
+      {
+          "opcode": "loop",
+          "arg": [
+              5
+          ]
+      },
+      {
+          "opcode": "less",
+          "arg": [
+              1,
+              4
+          ]
+      },
+      {
+          "opcode": "add",
+          "arg": [
+              1,
+              2
+          ]
+      },
+      {
+          "opcode": "save",
+          "arg": [
+              2
+          ]
+      },
+      {
+          "opcode": "add",
+          "arg": [
+              1,
+              0
+          ]
+      },
+      {
+          "opcode": "save",
+          "arg": [
+              3
+          ]
+      },
+      {
+          "opcode": "add",
+          "arg": [
+              3,
+              1
+          ]
+      },
+      {
+          "opcode": "save",
+          "arg": [
+              0
+          ]
+      },
+      {
+          "opcode": "add",
+          "arg": [
+              3,
+              0
+          ]
+      },
+      {
+          "opcode": "save",
+          "arg": [
+              1
+          ]
+      },
+      {
+          "opcode": "jne",
+          "arg": null
+      },
+      {
+          "opcode": "print",
+          "arg": [
+              2
+          ]
+      },
+      {
+          "opcode": "halt"
+      }
+  ]

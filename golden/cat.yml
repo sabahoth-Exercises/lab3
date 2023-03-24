@@ -1,0 +1,92 @@
+source: |-
+  let v = 1;
+  let c = 0;
+  while (v > c)
+  {
+    read(v);
+    line(v);
+  }
+input: |-
+  foo
+output: |
+  source LoC: 16 code instr: 8
+  ============================================================
+  foo
+  instr_counter:  16 ticks: 55
+log: |
+  DEBUG    root:machine.py:297 {TICK: 0, PC: 0, ADDR: 0, OUT: 0, AC: 0, DR: 0} ld [0, '1']
+  DEBUG    root:machine.py:303 {TICK: 4, PC: 1, ADDR: 0, OUT: 49, AC: 49, DR: 49} ld [1, '0']
+  DEBUG    root:machine.py:303 {TICK: 8, PC: 2, ADDR: 1, OUT: 48, AC: 48, DR: 48} loop [2]
+  DEBUG    root:machine.py:303 {TICK: 10, PC: 3, ADDR: 1, OUT: 48, AC: 48, DR: 48} more [0, 1]
+  DEBUG    root:machine.py:303 {TICK: 15, PC: 4, ADDR: 1, OUT: 48, AC: True, DR: 49} read [0]
+  DEBUG    root:machine.py:104 input: 'f'
+  DEBUG    root:machine.py:303 {TICK: 18, PC: 5, ADDR: 0, OUT: 102, AC: True, DR: 49} println [0]
+  DEBUG    root:machine.py:90 output: '' << 'f'
+  DEBUG    root:machine.py:303 {TICK: 21, PC: 6, ADDR: 0, OUT: 102, AC: True, DR: 49} jne None
+  DEBUG    root:machine.py:303 {TICK: 23, PC: 3, ADDR: 0, OUT: 102, AC: True, DR: 49} more [0, 1]
+  DEBUG    root:machine.py:303 {TICK: 28, PC: 4, ADDR: 1, OUT: 48, AC: True, DR: 102} read [0]
+  DEBUG    root:machine.py:104 input: 'o'
+  DEBUG    root:machine.py:303 {TICK: 31, PC: 5, ADDR: 0, OUT: 111, AC: True, DR: 102} println [0]
+  DEBUG    root:machine.py:90 output: 'f' << 'o'
+  DEBUG    root:machine.py:303 {TICK: 34, PC: 6, ADDR: 0, OUT: 111, AC: True, DR: 102} jne None
+  DEBUG    root:machine.py:303 {TICK: 36, PC: 3, ADDR: 0, OUT: 111, AC: True, DR: 102} more [0, 1]
+  DEBUG    root:machine.py:303 {TICK: 41, PC: 4, ADDR: 1, OUT: 48, AC: True, DR: 111} read [0]
+  DEBUG    root:machine.py:104 input: 'o'
+  DEBUG    root:machine.py:303 {TICK: 44, PC: 5, ADDR: 0, OUT: 111, AC: True, DR: 111} println [0]
+  DEBUG    root:machine.py:90 output: 'fo' << 'o'
+  DEBUG    root:machine.py:303 {TICK: 47, PC: 6, ADDR: 0, OUT: 111, AC: True, DR: 111} jne None
+  DEBUG    root:machine.py:303 {TICK: 49, PC: 3, ADDR: 0, OUT: 111, AC: True, DR: 111} more [0, 1]
+  DEBUG    root:machine.py:303 {TICK: 54, PC: 4, ADDR: 1, OUT: 48, AC: True, DR: 111} read [0]
+  WARNING  root:machine.py:305 Input buffer is empty!
+  INFO     root:machine.py:314 output_buffer: 'foo'
+
+code: |-
+  [
+      {
+          "opcode": "ld",
+          "arg": [
+              0,
+              "1"
+          ]
+      },
+      {
+          "opcode": "ld",
+          "arg": [
+              1,
+              "0"
+          ]
+      },
+      {
+          "opcode": "loop",
+          "arg": [
+              2
+          ]
+      },
+      {
+          "opcode": "more",
+          "arg": [
+              0,
+              1
+          ]
+      },
+      {
+          "opcode": "read",
+          "arg": [
+              0
+          ]
+      },
+      {
+          "opcode": "println",
+          "arg": [
+              0
+          ]
+      },
+      {
+          "opcode": "jne",
+          "arg": null
+      },
+      {
+          "opcode": "halt"
+      }
+  ]
+

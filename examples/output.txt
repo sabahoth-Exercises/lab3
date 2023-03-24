@@ -1,0 +1,148 @@
+[
+    {
+        "opcode": "ld",
+        "arg": [
+            0,
+            "h"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            1,
+            "e"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            2,
+            "l"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            3,
+            "l"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            4,
+            "o"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            5,
+            " "
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            6,
+            "w"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            7,
+            "o"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            8,
+            "r"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            9,
+            "l"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            10,
+            "d"
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            0
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            1
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            2
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            3
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            4
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            5
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            6
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            7
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            8
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            9
+        ]
+    },
+    {
+        "opcode": "println",
+        "arg": [
+            10
+        ]
+    },
+    {
+        "opcode": "halt"
+    }
+]

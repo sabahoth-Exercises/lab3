@@ -1,0 +1,115 @@
+[
+    {
+        "opcode": "ld",
+        "arg": [
+            0,
+            "1"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            1,
+            "2"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            2,
+            "0"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            3,
+            "0"
+        ]
+    },
+    {
+        "opcode": "ld",
+        "arg": [
+            4,
+            "4000000"
+        ]
+    },
+    {
+        "opcode": "loop",
+        "arg": [
+            5
+        ]
+    },
+    {
+        "opcode": "less",
+        "arg": [
+            1,
+            4
+        ]
+    },
+    {
+        "opcode": "add",
+        "arg": [
+            1,
+            2
+        ]
+    },
+    {
+        "opcode": "save",
+        "arg": [
+            2
+        ]
+    },
+    {
+        "opcode": "add",
+        "arg": [
+            1,
+            0
+        ]
+    },
+    {
+        "opcode": "save",
+        "arg": [
+            3
+        ]
+    },
+    {
+        "opcode": "add",
+        "arg": [
+            3,
+            1
+        ]
+    },
+    {
+        "opcode": "save",
+        "arg": [
+            0
+        ]
+    },
+    {
+        "opcode": "add",
+        "arg": [
+            3,
+            0
+        ]
+    },
+    {
+        "opcode": "save",
+        "arg": [
+            1
+        ]
+    },
+    {
+        "opcode": "jne",
+        "arg": null
+    },
+    {
+        "opcode": "print",
+        "arg": [
+            2
+        ]
+    },
+    {
+        "opcode": "halt"
+    }
+]
